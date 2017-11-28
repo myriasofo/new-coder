@@ -1,3 +1,4 @@
+*.png
 *.sublime-*
 *.pyc
 .idea

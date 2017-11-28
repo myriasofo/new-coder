@@ -3,7 +3,7 @@ import csv
 
 CSV_FILE_PATH = "data/sample_sfpd_incident_all.csv"
 
-def extract_csv_file_as_json_list(file_path):
+def run(file_path):
     json_list = []
     with open(file_path) as file_obj:
         csv_file = csv.reader(file_obj, delimiter=',')
@@ -15,7 +15,7 @@ def extract_csv_file_as_json_list(file_path):
     return json_list
 
 def main():
-    parsed = extract_csv_file_as_json_list(CSV_FILE_PATH)
+    parsed = run(CSV_FILE_PATH)
     print('data type of output:', type(parsed))
     print("data type of output's elements:", type(parsed[0]))
     print(parsed[0])
